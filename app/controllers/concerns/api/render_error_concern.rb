@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 module Api
+  ##
+  # Permet de catcher des erreurs pour rendre une page d'erreur en json
   module RenderErrorConcern
     extend ActiveSupport::Concern
 

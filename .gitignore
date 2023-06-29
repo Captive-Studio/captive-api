@@ -8,3 +8,13 @@
 /test/dummy/log/*.log
 /test/dummy/storage/
 /test/dummy/tmp/
+.DS_Store
+
+# node
+node_modules/
+
+## Documentation cache and generated files:
+/.yardoc/
+/_yardoc/
+/doc/
+/rdoc/

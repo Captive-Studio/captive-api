@@ -1,6 +1,12 @@
 # frozen_string_literal: true
 
 module Api
+  ##
+  # Défini le nombre max d'items par page à 100
+  # `MAX_ITEMS_PAR_PAGE = 100`
+  #
+  # Défini le nombre par défaut d'items par page à 10
+  # DEFAULT_NB_ITEMS_PAR_PAGE = 10
   module PaginationConcern
     extend ActiveSupport::Concern
 
