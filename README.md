@@ -1,6 +1,5 @@
 # Captive::Api
 
-[![License][license-image]][license-url]
 [![Gem Version](https://img.shields.io/gem/v/captive-api.svg)](https://rubygems.org/gems/captive-api)
 
 
