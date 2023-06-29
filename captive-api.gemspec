@@ -3,7 +3,7 @@ require_relative "lib/captive/api/version"
 Gem::Specification.new do |spec|
   spec.name        = "captive-api"
   spec.version     = Captive::Api::VERSION
-  spec.authors     = ["Clément Prod'homme"]
+  spec.authors     = ['Captive', "Clément Prod'homme"]
   spec.email       = ["clement.prod-homme@captive.fr"]
   spec.homepage    = "https://www.captive.fr/"
   spec.summary     = "Code commun des API de Captive"
