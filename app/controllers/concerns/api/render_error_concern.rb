@@ -8,6 +8,7 @@ module Api
 
     included do
       rescue_from ActiveRecord::RecordNotFound, with: :not_found
+
       rescue_from CanCan::AccessDenied do |exception|
         render_error_from_exception(exception, status: :forbidden)
       end
@@ -32,8 +33,8 @@ module Api
         )
       end
 
-      def not_found
-        render_error(message: 'Erreur not found', status: :not_found)
+      def not_found(exception)
+        render_error(message: "#{exception.model} not found", status: :not_found)
       end
 
       def render_error(message:, status:, errors: [], code: nil)
