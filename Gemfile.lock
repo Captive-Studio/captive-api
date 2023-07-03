@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    captive-api (1.2.0)
+    captive-api (1.2.1)
       cancancan (>= 3.5.0)
       rails (>= 7.0.0)
 
