@@ -23,7 +23,7 @@ module Api
         errors = object.errors.messages
         Rails.logger.error("Impossible de sauvagarder l'objet #{object.class} : #{errors}")
         render_error(
-          message: message, errors: errors, status: :unprocessable_entity
+          message: message, errors: errors, status: status
         )
       end
 
