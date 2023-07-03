@@ -8,6 +8,7 @@ module Api
 
     included do
       rescue_from ActiveRecord::RecordNotFound, with: :not_found
+      rescue_from ActionController::ParameterMissing, with: :handle_parameter_missing
 
       rescue_from CanCan::AccessDenied do |exception|
         render_error_from_exception(exception, status: :forbidden)
@@ -31,6 +32,10 @@ module Api
         render_error(
           message: exception.message, errors: exception.message, status: status
         )
+      end
+
+      def handle_parameter_missing(exception)
+        render_error_from_exception(exception, status: :bad_request)
       end
 
       def not_found(exception)
