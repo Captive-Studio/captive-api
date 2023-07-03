@@ -96,6 +96,29 @@ end
 </tr>
 </tbody></table>
 
+<h3 id="paginationconcern">PaginationConcern</h3>
+
+<h4 id="pagination"><code>#pagination</code></h4>
+
+<p>You can use the pagination method like this : </p>
+
+<pre class="code ruby"><code class="ruby"><span class='ivar'>@tenues</span> <span class='op'>=</span> <span class='ivar'>@tenues</span><span class='period'>.</span><span class='id identifier rubyid_page'>page</span><span class='lparen'>(</span><span class='id identifier rubyid_pagination'>pagination</span><span class='lbracket'>[</span><span class='symbol'>:page</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+                 <span class='period'>.</span><span class='id identifier rubyid_per'>per</span><span class='lparen'>(</span><span class='id identifier rubyid_pagination'>pagination</span><span class='lbracket'>[</span><span class='symbol'>:per_page</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+</code></pre>
+
+<p><em>The method <code>page</code> and <code>per</code> come from <a href="https://github.com/mislav/will_paginate">will_paginate</a></em></p>
+
+<p>The pagination method return an hash like this : </p>
+
+<pre class="code ruby"><code class="ruby"><span class='lbrace'>{</span> <span class='label'>page:</span> <span class='int'>1</span><span class='comma'>,</span> <span class='label'>per_page:</span> <span class='int'>10</span> <span class='rbrace'>}</span>
+</code></pre>
+
+<p>⚠️ The first page is <code>1</code> and not <code>0</code> !</p>
+
+<h3 id="rendererrorconcern">RenderErrorConcern</h3>
+
+<p>TODO</p>
+
 <h2 id="installation">Installation</h2>
 
 <p>Add this line to your application&#39;s Gemfile:</p>
@@ -123,7 +146,7 @@ end
 </div></div>
 
       <div id="footer">
-  Generated on Mon Jul  3 10:25:59 2023 by
+  Generated on Mon Jul  3 10:41:34 2023 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.34 (ruby-3.2.1).
 </div>
