@@ -10,15 +10,15 @@ module Api
   module PaginationConcern
     extend ActiveSupport::Concern
 
-    included do
-      MAX_ITEMS_PAR_PAGE = 100
-      DEFAULT_NB_ITEMS_PAR_PAGE = 10
+    included do |base|
+      base.const_set :MAX_ITEMS_PAR_PAGE, 100
+      base.const_set :DEFAULT_NB_ITEMS_PAR_PAGE, 10
 
       def pagination
         @pagination ||=
           begin
-            par_page = (params[:per_page] || DEFAULT_NB_ITEMS_PAR_PAGE).to_i
-            par_page = MAX_ITEMS_PAR_PAGE if par_page > MAX_ITEMS_PAR_PAGE
+            par_page = (params[:per_page] || self.class::DEFAULT_NB_ITEMS_PAR_PAGE).to_i
+            par_page = self.class::MAX_ITEMS_PAR_PAGE if par_page > self.class::MAX_ITEMS_PAR_PAGE
             page = (params[:page] || 1).to_i
             { page: page, per_page: par_page }
           end
