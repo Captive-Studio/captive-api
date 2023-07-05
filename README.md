@@ -43,7 +43,7 @@ You can use the pagination method like this :
 The pagination method return an hash like this : 
 
 ```ruby
-{ page: 1, per_page: 10 }
+{ page: 1, per_page: 20 }
 ```
 
 ⚠️ The first page is `1` and not `0` !

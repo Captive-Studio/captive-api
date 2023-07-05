@@ -5,14 +5,14 @@ module Api
   # Défini le nombre max d'items par page à 100
   # `MAX_ITEMS_PAR_PAGE = 100`
   #
-  # Défini le nombre par défaut d'items par page à 10
-  # DEFAULT_NB_ITEMS_PAR_PAGE = 10
+  # Défini le nombre par défaut d'items par page à 20
+  # DEFAULT_NB_ITEMS_PAR_PAGE = 20
   module PaginationConcern
     extend ActiveSupport::Concern
 
     included do |base|
       base.const_set :MAX_ITEMS_PAR_PAGE, 100
-      base.const_set :DEFAULT_NB_ITEMS_PAR_PAGE, 10
+      base.const_set :DEFAULT_NB_ITEMS_PAR_PAGE, 20
 
       def pagination
         @pagination ||=
