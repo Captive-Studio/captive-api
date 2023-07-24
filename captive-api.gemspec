@@ -21,4 +21,5 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency "rails", ">= 7.0.0"
   spec.add_dependency "cancancan", ">= 3.5.0"
+  spec.add_dependency "oj", ">= 3.15.0"
 end
